@@ -9,7 +9,7 @@
 <body>
 当前课程是：<%=request.getParameter("coursename") %>
 <form>
-<input type="button" value="资源" onclick="window.location.reload('resource.jsp?courseid=<%=request.getParameter("courseid") %>')">
+<input type="button" value="资源" onclick="window.location.href='resource.jsp?courseid=<%=request.getParameter("courseid") %>'">
 <input type="button" value="作业" onclick="window.location.reload('homework.jsp')">
 <input type="button" value="课程简介" >
 <input type="button" value="聊天室" >
