@@ -29,5 +29,4 @@ public class courseManager {
 		db_connector.CloseConnection(conn);
 		return list;
 	}
-
 }
