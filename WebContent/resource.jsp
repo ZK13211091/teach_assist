@@ -15,15 +15,19 @@
     <% 
 	if(session.getAttribute("role")!=null){
 		String role = (String)session.getAttribute("role");
-		List<resource>list = resourceManager.showlist(1);
-	for(resource c : list){%>
+		List<resource>list = resourceManager.showlist(request.getParameter("courseid"));
+		%><strong>当前角色：<%=role%></br></strong>
+
+	<% for(resource c : list){%>
 	<tr>
 		<td>
 		<a href=<%=c.getrAddress() %> download=<%=c.getrName() %>>Name:<%=c.getrName() %> </a>
 		</td></br>
 	</tr>
 
-   	<% }
-	}%>
+   	<% 
+   	}
+	}
+	%>
 </body>
 </html>

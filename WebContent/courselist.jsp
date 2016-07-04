@@ -17,7 +17,7 @@
 		%><strong>当前角色：<%=role%></br></strong>
 		
 		<%for(course c : list){%>
-		<a href="coursedetail.jsp?coursename=<%=c.getcName()%>"><%= c.getcName() %></a>
+		<a href="coursedetail.jsp?coursename=<%=c.getcName()%>&courseid=<%=c.getCourseid()%>"><%= c.getcName() %></a>
 		<%}
 	}
 	%>
